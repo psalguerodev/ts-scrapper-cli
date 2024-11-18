@@ -1,0 +1,26 @@
+{
+  "totalItems": 20,
+  "priceStats": {
+    "min": 13.99,
+    "max": 57.25,
+    "average": 38.048500000000004,
+    "median": 41.38
+  },
+  "ratingStats": {
+    "average": 2.85,
+    "distribution": {
+      "1": 6,
+      "2": 3,
+      "3": 3,
+      "4": 4,
+      "5": 4
+    }
+  },
+  "availabilityDistribution": {
+    "undefined": 20
+  },
+  "dateRange": {
+    "start": "2024-11-18T18:00:44.477Z",
+    "end": "2024-11-18T18:00:44.480Z"
+  }
+}
