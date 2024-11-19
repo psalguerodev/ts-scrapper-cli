@@ -1,7 +1,7 @@
-import { AnalyzerService } from '../../src/services/analyzer.service';
+import {AnalyzerService} from '../../src/services/analyzer.service';
 import fs from 'fs';
-import { promisify } from 'util';
-import { AnalysisResult } from '../../src/interfaces/analyzer.interface';
+import {promisify} from 'util';
+import {AnalysisResult} from '../../src/interfaces/analyzer.interface';
 
 jest.mock('fs');
 const writeFile = promisify(fs.writeFile);

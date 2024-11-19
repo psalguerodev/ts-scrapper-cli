@@ -2,7 +2,6 @@ import {ScrapingOptions} from '../types';
 import {ScraperService} from '../services/scraper.service';
 import logger from '../utils/logger';
 import path from 'path';
-import {DEFAULT_OUTPUT_DIR} from '../config/constants';
 import {ConfigService} from "../config/config.service";
 
 export async function executeScrapingCommand(
