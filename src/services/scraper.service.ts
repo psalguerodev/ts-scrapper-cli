@@ -9,20 +9,19 @@ import {ConfigService} from "../config/config.service";
 
 export class ScraperService implements IScrapperService {
     private readonly config = ConfigService.getInstance();
-    private maxRetries = 0;
-    private retryDelay = 0;
-
-    private readonly headers = {
-        'User-Agent': this.config.userAgent,
-        Accept:
-            'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        Connection: 'keep-alive',
-    };
+    private readonly maxRetries: number;
+    private readonly retryDelay: number;
+    private readonly headers: Record<string, string>;
 
     constructor() {
         this.maxRetries = this.config.maxRetries;
         this.retryDelay = this.config.retryDelay;
+        this.headers = {
+            'User-Agent': this.config.userAgent,
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Connection': 'keep-alive',
+        };
     }
 
     private async ensureDirectoryExists(filePath: string): Promise<void> {
