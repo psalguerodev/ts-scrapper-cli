@@ -1,7 +1,9 @@
 export class ConfigService {
     private static instance: ConfigService;
 
-    private constructor() {}
+    private constructor() {
+        // Constructor privado para implementar Singleton
+    }
 
     public static getInstance(): ConfigService {
         if (!ConfigService.instance) {
